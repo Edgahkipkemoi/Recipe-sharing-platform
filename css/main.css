@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+body {
+  font-family: Poppins, sans-serif;
+  background-image: url("../assets/images/spices.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-color: blue; */
+}
+
+#navigation {
+  text-align: center;
+  color: black;
+  margin: 0 100px;
+}
+
+#navigation a {
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  display: inline-block;
+  margin: 0 20px;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+.logoimage img {
+  height: 20%;
+  width: 20%;
+  margin-top: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+#foodrecipes {
+  text-align: center;
+  color: white;
+}
+
+#foodrecipes h1 {
+  font-size: 80px;
+  font-family: "Playfair Display", serif;
+}
+
+#foodrecipes p {
+  font-size: 25px;
+  margin-top: -60px;
+  font-family: "Playfair Display", serif;
+}
+
+button {
+  background-color: rgb(5, 66, 66);
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border-color: antiquewhite;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.weekly {
+  background-color: rgb(4, 71, 71);
+  color: white;
+  text-align: center;
+  display: column;
+  margin-bottom: -14px;
+}
+
+.weekly h2 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 4px;
+  font-size: 40px;
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+
+#favorites {
+  display: flex;
+  justify-content: center;
+  gap: 58px;
+  margin-bottom: 50px;
+}
+
+#reserved img {
+  /* height: 5%; */
+  width: 55px;
+}
+
+#favorites img {
+  height: 300px;
+  width: 300px;
+  justify-content: space-between;
+  object-fit: cover;
+  border-radius: 10px;
+  gap: 300px;
+}
+
+/* Force nav links to stay in one horizontal line on all screen sizes */
+#navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+#navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+#reserved img {
+  display: flex;
+  justify-content: flex;
+  gap: 15px;
+  display: flex;
+  gap: 20px;
+  /* height: 40%;
+  width: 40%;
+  color: white; */
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  /* height: 40%;
+  width: 40%;
+  color: white; */
+  justify-content: flex-end;
+  /* margin-right: 50px; */
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#reserved {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.logoimage img {
+  height: 15%;
+  width: 15%;
+  animation: spin 5s linear infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply to all images within #favorites and .logoimage */
+#favorites img,
+.logoimage img {
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the transformation */
+}
+
+#favorites img:hover,
+.logoimage img:hover {
+  transform: scale(1.2); /* Increase size by 20% */
+  cursor: pointer; /* Optional: change the cursor to pointer */
+}
+
+.logoimage img:hover {
+  cursor: pointer;
+  filter: brightness(1.3) drop-shadow(0 0 10px #bfff00)
+    drop-shadow(0 0 20px #32cd32);
+  transform: scale(1.1) rotate(0deg);
+}
+
+
+/* Media query to ensure same behavior on small screens */
+@media (max-width: 600px) {
+  #navigation {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  #navigation a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll; /* Change background attachment for better performance */
+  }
+
+  #navigation {
+    flex-direction: column; /* Stack navigation links vertically */
+    margin: 0; /* Remove horizontal margins */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  #navigation a {
+    font-size: 14px; /* Reduce font size for navigation links */
+    margin: 10px 0; /* Add vertical margin between links */
+  }
+
+  .logoimage img {
+    height: 15%; /* Adjust logo size for smaller screens */
+    width: 15%;
+  }
+
+  #foodrecipes h1 {
+    font-size: 40px; /* Reduce heading size */
+  }
+
+  #foodrecipes p {
+    font-size: 18px; /* Reduce paragraph size */
+  }
+
+  #favorites {
+    flex-direction: column; /* Stack favorites vertically */
+    align-items: center; /* Center align items */
+  }
+
+  #favorites div {
+    margin: 10px 0; /* Add vertical margin between recipe items */
+  }
+
+  #favorites img {
+    height: 200px; /* Adjust image size */
+    width: 200px; /* Adjust image size */
+  }
+
+  #reserved {
+    flex-direction: column; /* Stack reserved items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  #reserved img {
+    width: 40px; /* Adjust social icon size */
+    height: 40px; /* Adjust social icon size */
+  }
+
+  footer {
+    position: relative; /* Change footer position for better layout */
+    margin-top: 20px; /* Add margin above footer */
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll; /* Change background attachment for better performance */
+  }
+
+  #navigation {
+    flex-direction: column; /* Stack navigation links vertically */
+    margin: 0; /* Remove horizontal margins */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  #navigation a {
+    font-size: 14px; /* Reduce font size for navigation links */
+    margin: 10px 0; /* Add vertical margin between links */
+  }
+
+  .logoimage img {
+    height: 15%; /* Adjust logo size for smaller screens */
+    width: 15%;
+  }
+
+  #foodrecipes h1 {
+    font-size: 40px; /* Reduce heading size */
+  }
+
+  #foodrecipes p {
+    font-size: 18px; /* Reduce paragraph size */
+  }
+
+  #favorites {
+    flex-direction: column; /* Stack favorites vertically */
+    align-items: center; /* Center align items */
+  }
+
+  #favorites div {
+    margin: 10px 0; /* Add vertical margin between recipe items */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  #favorites img {
+    height: 200px; /* Adjust image size */
+    width: 200px; /* Adjust image size */
+  }
+
+  #reserved {
+    flex-direction: column; /* Stack reserved items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  #reserved img {
+    width: 40px; /* Adjust social icon size */
+    height: 40px; /* Adjust social icon size */
+  }
+
+  footer {
+    position: relative; /* Change footer position for better layout */
+    margin-top: 20px; /* Add margin above footer */
+    text-align: center; /* Center footer text */
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll; /* Change background attachment for better performance */
+  }
+
+  #navigation {
+    flex-direction: row; /* Keep navigation links in a row */
+    justify-content: center; /* Center the navigation links */
+    margin: 0; /* Remove horizontal margins */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  #navigation a {
+    font-size: 14px; /* Reduce font size for navigation links */
+    margin: 10px; /* Add margin around links for spacing */
+  }
+
+  .logoimage img {
+    height: 15%; /* Adjust logo size for smaller screens */
+    width: 15%;
+  }
+
+  #foodrecipes h1 {
+    font-size: 40px; /* Reduce heading size */
+    margin-bottom: 82px;
+  }
+
+  #foodrecipes p {
+    font-size: 18px; /* Reduce paragraph size */
+  }
+
+  #favorites {
+    flex-direction: column; /* Stack favorites vertically */
+    align-items: center; /* Center align items */
+  }
+
+  #favorites div {
+    margin: 10px 0; /* Add vertical margin between recipe items */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  #favorites img {
+    height: 200px; /* Adjust image size */
+    width: 200px; /* Adjust image size */
+  }
+
+  #reserved {
+    flex-direction: column; /* Stack reserved items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  #reserved img {
+    width: 40px; /* Adjust social icon size */
+    height: 40px; /* Adjust social icon size */
+  }
+
+  footer {
+    position: relative; /* Change footer position for better layout */
+    margin-top: 20px; /* Add margin above footer */
+    text-align: center; /* Center footer text */
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  footer p {
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  #reserved {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  #reserved img {
+    height: 30px;
+    width: 30px;
+  }
+}

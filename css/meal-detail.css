@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.meal-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+}
+
+.meal-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.meal-container h1 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #333;
+}
+
+.meal-container h2 {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #555;
+}
+
+#meal-ingredients {
+  list-style-type: disc;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+#meal-instructions ol {
+  text-align: left;
+  padding-left: 20px;
+}
+.back-button {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.back-button button {
+  padding: 8px 14px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.back-button button:hover {
+  background-color: #c0392b;
+}
+
+/* meal-detail.css */
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ffefba, #ffffff); /* soft gradient */
+}
+
+.back-button {
+  padding: 1rem;
+}
+.back-button button {
+  padding: 8px 16px;
+  background-color: #ff7f50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.meal-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+#meal-title {
+  font-size: 2.2rem;
+  color: #ff6347;
+  margin-bottom: 1rem;
+}
+
+#meal-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  margin-top: 2rem;
+  border-bottom: 2px solid #ff7f50;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+ul,
+ol {
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Make list text (ingredients & steps) bigger and clearer */
+ul,
+ol {
+  font-size: 2rem; /* increase from default */
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+#meal-instructions {
+  font-size: 2rem; /* increase instruction font size */
+  line-height: 1.8;
+  color: #444;
+  text-align: left;
+}
+
+/* Prevent horizontal scrolling */
+body,
+html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure that the meal container is responsive */
+.meal-container {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Ensure images don't overflow the container */
+#meal-image {
+  max-width: 100%; /* Ensure the image fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any unwanted space below the image */
+}
+
+/* Prevent horizontal scrolling from overflowing other elements */
+.meal-container img {
+  max-width: 100%;
+  height: auto;
+}

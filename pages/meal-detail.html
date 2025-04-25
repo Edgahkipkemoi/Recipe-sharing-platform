@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meal Details</title>
+  <link rel="stylesheet" href="../css/meal-detail.css" />
+</head>
+<body>
+
+  <!-- Go Back Button -->
+  <div class="back-button">
+    <button onclick="history.back()">← Go Back</button>
+  </div>
+
+  <!-- Meal Details Container -->
+  <div class="meal-container">
+    <h1 id="meal-title"></h1>
+    <img id="meal-image"  alt="" />
+
+    <h2>Ingredients</h2>
+    <ul id="meal-ingredients"></ul>
+
+    <h2>Preparation Steps</h2>
+    <ol id="meal-instructions"></ol>
+
+  </div>
+
+  <script src="../js/meal-detail.js"></script>
+</body>
+</html>
