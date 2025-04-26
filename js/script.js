@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // 👉 Use a separate key and redirect to weekly-meal.html
             mealDiv.addEventListener("click", () => {
                 localStorage.setItem("selectedWeeklyMeal", JSON.stringify(meal));
-                window.location.href = "weekly-meal.html";
+                window.location.href = "/pages/weekly-meal.html";
             });
 
             favoritesContainer.appendChild(mealDiv);
