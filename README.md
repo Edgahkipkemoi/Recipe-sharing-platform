@@ -33,10 +33,14 @@ The provided JavaScript code listens for the `DOMContentLoaded` event to ensure 
 
 ## 📂 Project Structure
 
+
 /project-root
 │── index.html # Main page to display meal details
+
 │── script.js # JavaScript logic (the provided code)
+
 │── styles.css # Optional styling
+
 │── README.md # Documentation
 
 
