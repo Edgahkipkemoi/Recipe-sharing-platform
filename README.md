@@ -32,3 +32,50 @@ The provided JavaScript code listens for the `DOMContentLoaded` event to ensure 
 ---
 
 ## 📂 Project Structure
+
+/project-root
+│── index.html # Main page to display meal details
+│── script.js # JavaScript logic (the provided code)
+│── styles.css # Optional styling
+│── README.md # Documentation
+
+
+---
+
+## ⚡ Usage
+1. Save a meal object into `localStorage` (usually done via a meal search or selection page). Example:
+   ```js
+   localStorage.setItem("selectedMeal", JSON.stringify({
+     strMeal: "Spaghetti Carbonara",
+     strMealThumb: "https://www.example.com/carbonara.jpg",
+     strInstructions: "Boil pasta...\nCook bacon...\nMix with eggs and cheese...",
+     strIngredient1: "Spaghetti",
+     strMeasure1: "200g",
+     strIngredient2: "Bacon",
+     strMeasure2: "100g"
+   }));
+
+
+Open the details page (index.html).
+
+The script will automatically populate the meal details into the page.
+
+🛠️ Technologies Used
+
+HTML5 – structure
+
+CSS3 – styling
+
+JavaScript (ES6) – dynamic rendering and DOM manipulation
+
+LocalStorage – storing and retrieving meal data
+
+🌟 Future Improvements
+
+Add a search and browse feature for recipes.
+
+Save and manage favorite recipes.
+
+Enable sharing recipes via links or QR codes.
+
+Responsive mobile-friendly UI.
